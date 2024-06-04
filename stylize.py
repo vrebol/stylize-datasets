@@ -98,8 +98,8 @@ def main():
     decoder.eval()
     vgg.eval()
 
-    decoder.load_state_dict(torch.load('/kaggle/working/DRAM_for_Adain --vgg /kaggle/input/adain/pytorch/main/4/decoder.pth'))
-    vgg.load_state_dict(torch.load('/kaggle/working/DRAM_for_Adain --vgg /kaggle/input/adain/pytorch/main/1/vgg_normalised.pth'))
+    decoder.load_state_dict(torch.load('/kaggle/input/adain/pytorch/main/4/decoder.pth'))
+    vgg.load_state_dict(torch.load('/kaggle/input/adain/pytorch/main/4/vgg_normalised.pth'))
     vgg = nn.Sequential(*list(vgg.children())[:31])
 
     vgg.to(device)
